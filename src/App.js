@@ -1,23 +1,33 @@
 
 import './App.css';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import Home from './pages/Home/Home';
-import About from './pages/About/About';
-import Contact from './pages/Contact/Contact';
+import React, { lazy, Lazy, Suspense } from 'react';
+// import Home from './pages/Home/Home';
+// const Home = lazy(() => import('./pages/Home/Home'))
 import Nav from './pages/Nav/Nav';
-import MouseTrackerPage from './pages/MouseTrackerPage/MouseTrackerPage'
+// import About from './pages/About/About';
+// import Contact from './pages/Contact/Contact';
+// import MouseTrackerPage from './pages/MouseTrackerPage/MouseTrackerPage'
+const Home = lazy(() => import('./pages/Home/Home'));
+const About = lazy(() => import('./pages/About/About'))
+const Contact = lazy(() => import('./pages/Contact/Contact'));
+const MouseTrackerPage = lazy(() => import('./pages/MouseTrackerPage/MouseTrackerPage'))
+
+
 
 
 function App() {
   return (
     <Router>
       <Nav />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/mouseTracker" element={<MouseTrackerPage />} />
-      </Routes>
+      <Suspense fallback={<div>Loading...</div>}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/mouseTracker" element={<MouseTrackerPage />} />
+        </Routes>
+      </Suspense>
     </Router>
   );
 }
