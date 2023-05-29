@@ -11,7 +11,6 @@ function MouseTracker() {
     };
 
     useEffect(() => {
-        console.log("ddddd");
         window.addEventListener('mousemove', handleMouseMove);
         return () => {
             window.removeEventListener('mousemove', handleMouseMove);
