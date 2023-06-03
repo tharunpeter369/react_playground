@@ -28,6 +28,7 @@ function App() {
           <Route path="/hooks" element={<Hooks />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/mouseTracker" element={<MouseTrackerPage />} />
+          
         </Routes>
       </Suspense>
     </Router>
