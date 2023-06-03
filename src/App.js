@@ -8,6 +8,7 @@ import Nav from './pages/Nav/Nav';
 // import About from './pages/About/About';
 // import Contact from './pages/Contact/Contact';
 // import MouseTrackerPage from './pages/MouseTrackerPage/MouseTrackerPage'
+import Hooks from './pages/Hooks/Hooks';
 const Home = lazy(() => import('./pages/Home/Home'));
 const About = lazy(() => import('./pages/About/About'))
 const Contact = lazy(() => import('./pages/Contact/Contact'));
@@ -23,7 +24,8 @@ function App() {
       <Suspense fallback={<div>Loading...</div>}>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
+          {/* <Route path="/about" element={<About />} /> */}
+          <Route path="/hooks" element={<Hooks />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/mouseTracker" element={<MouseTrackerPage />} />
         </Routes>

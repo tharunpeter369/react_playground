@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
 // import  from "react";
-import "./About.css";
+import "./Hooks.css";
 
-function About() {
+function Hooks() {
   const inputRef = useRef(null);
   const handleClick = () => {
     console.log(inputRef.current.value);
@@ -11,7 +11,7 @@ function About() {
   };
   return (
     <div>
-      <h1>about</h1>
+      <h1>Hooks</h1>
       <div className="main">
         <input type="text" placeholder="type..." ref={inputRef} />
         <button onClick={handleClick}>click me</button>
@@ -21,4 +21,4 @@ function About() {
   );
 }
 
-export default About;
+export default Hooks;
