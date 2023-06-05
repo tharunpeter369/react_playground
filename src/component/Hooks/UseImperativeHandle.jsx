@@ -1,7 +1,7 @@
 import React, { useRef } from 'react'
 import ImperativeHandleChild from './subComponents/ImperativeHandleChild'
 
-function UseImperativeHandle() {
+const UseImperativeHandle=(props)=> {
     const buttonRef = useRef(null)
     return (
         <>

@@ -1,7 +1,7 @@
 
 import './App.css';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import React, { lazy, Lazy, Suspense } from 'react';
+import React, { lazy, Suspense } from 'react';
 // import Home from './pages/Home/Home';
 // const Home = lazy(() => import('./pages/Home/Home'))
 import Nav from './pages/Nav/Nav';
@@ -28,7 +28,7 @@ function App() {
           <Route path="/hooks" element={<Hooks />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/mouseTracker" element={<MouseTrackerPage />} />
-          
+
         </Routes>
       </Suspense>
     </Router>

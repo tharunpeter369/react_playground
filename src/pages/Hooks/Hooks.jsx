@@ -4,6 +4,8 @@ import UseReducer from "../../component/Hooks/UseReducer";
 import UseLayout from "../../component/Hooks/UseLayout";
 import UseImperativeHandle from "../../component/Hooks/UseImperativeHandle";
 import UseContext from "../../component/Hooks/UseContext";
+import UseMemo from "../../component/Hooks/UseMemo";
+import UseCallBack from "../../component/Hooks/UseCallBack";
 // import  from "react";
 
 function Hooks() {
@@ -24,6 +26,12 @@ function Hooks() {
       return <UseImperativeHandle />
     case "useContext":
       return <UseContext />
+    case "useMemo":
+      return <UseMemo />
+    case "useMemo":
+      return <UseMemo />
+    case "useCallBack":
+      return <UseCallBack />
   }
 
   return (
@@ -45,6 +53,12 @@ function Hooks() {
         </li>
         <li>
           <a href="#" onClick={() => handleClick("useContext")}>useContext</a>
+        </li>
+        <li>
+          <a href="#" onClick={() => handleClick("useMemo")}>useMemo</a>
+        </li>
+        <li>
+          <a href="#" onClick={() => handleClick("useCallBack")}>useCallBack</a>
         </li>
       </ol>
     </div>
